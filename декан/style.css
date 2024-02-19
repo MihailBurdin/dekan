@@ -1,0 +1,29 @@
+#gameScreen {
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #1a1a1a; /* Темно-серый цвет фона для gameScreen */
+    color: #fff; /* Белый цвет текста */
+    z-index: 9999;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#gameScreen h2,
+#gameScreen h3 {
+    margin: 5px 0;
+    color: #ff5733; /* Оранжевый цвет заголовков */
+}
+
+#gameCanvas {
+    height: 570px;
+    margin-top: 20px;
+    background-color: #233e47; /* Темно-серый цвет фона для канваса */
+}

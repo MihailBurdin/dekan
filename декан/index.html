@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Игра</title>
+    
+</head>
+<body>
+    <div id="mapSelection">
+        <h1>Выбор карты</h1>
+        <button onclick="startGame('map1', 'map1.png')">Карта 1</button>
+        <button onclick="startGame('map2', 'map2.png')">Карта 2</button>
+    </div>
+
+    <div id="loginScreen" style="display: none;">
+        <h1>Экран входа</h1>
+        <div id="map">Карта игры</div>
+        <input type="text" id="playerName" placeholder="Введите ваше имя">
+        <button onclick="startGame()">Начать игру</button>
+    </div>
+
+    <div id="gameScreen" style="display: none;">
+        <h2>Имя игрока: <span id="playerNameDisplay"></span></h2>
+        <h3>Текущее время: <span id="currentTime"></span></h3>
+        <h3>Время прошедшее: <span id="elapsedTime"></span></h3>
+        <h3>Жизни: <span id="playerLivesDisplay"></span></h3>
+        <canvas id="gameCanvas" width="2000" height="700"></canvas>
+    </div>
+
+    <div id="resultScreen" style="display: none;">
+        <h2>Результаты</h2>
+        <p>Время игры: <span id="gameTimeResult"></span></p>
+        <p>Количество монстров: <span id="monsterCollisionsResult"></span></p>
+        <p>Количество ловушек: <span id="trapHitsResult"></span></p>
+        <p>Оставшиеся жизни: <span id="remainingLivesResult"></span></p>
+        <button onclick="restartGame()">Играть сначала</button>
+    </div>
+    
+    <div id="pauseMenu" style="display: none;">
+        <button id="continueButton" onclick="continueGame()">Продолжить</button>
+        <button id="restartButton" onclick="restartGame()">Начать сначала</button>
+      </div>
+    <script src="main.js"></script>
+</body>
+</html>
